@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+
+
+}
+
+.contenedor {
+    margin: 50px;
+    background-color: rgba(100, 29, 224, .5);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "carrusel"
+        "aside"
+        "footer"
+    ;
+    gap: 15px;
+    padding: 5px;
+}
+
+.sec {
+    border: 1px solid rgb(41, 35, 35);
+}
+
+.header {
+    max-width: 100%;
+    background-color: rgb(199, 233, 76);
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "titulo buscar"
+        "titulo buscar"
+        "menu perfil"
+        "menu perfil"
+    ;
+    padding: 5px;
+}
+
+.titulo {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #2C5364;
+    grid-area: titulo;
+}
+
+.titulo img {
+    background-color: #0f9177;
+    padding: 5px;
+    border-radius: 10%;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.buscar {
+    padding: 10px;
+    background-color: #2C5364;
+    grid-area: buscar;
+}
+
+.menu {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(209, 230, 135);
+    grid-area: menu;
+}
+
+.perfil {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(192, 150, 231);
+    grid-area: perfil;
+}
+
+
+.carrusel {
+    background-color: rosybrown;
+    grid-area: carrusel;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "carrusel carrusel carrusel carrusel carrusel"
+        "vendidos vendidos p1 p2 p3"
+    ;
+}
+
+.fotos_carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 400px;
+    grid-area: carrusel;
+    background-color: greenyellow;
+}
+
+.vendidos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    grid-area: vendidos;
+}
+
+.producto1,
+.producto2,
+.producto3 {
+    display: flex;
+    background-color: aqua;
+    border-radius: 10px;
+    margin: 20px 8px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto1 {
+    grid-area: p1;
+}
+
+.producto2 {
+    grid-area: p2;
+}
+
+.producto3 {
+    grid-area: p3;
+}
+
+.aside {
+    background-color: rgb(192, 150, 231);
+    grid-area: aside;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "gana video asidealgo"
+        "btn video asidealgo"
+    ;
+}
+
+.gana {
+    align-items: center;
+    margin: 20px;
+    font-size: 30px;
+    grid-area: gana;
+    display: flex;
+    justify-content: center;
+}
+
+.gana input {
+    background-color: red;
+    padding: 5px;
+    color: white;
+}
+
+.video {
+    padding: 15px 0;
+    grid-area: video;
+}
+
+.video img {
+    height: 100px;
+}
+
+.asidealgo {
+    display: flex;
+    grid-area: asidealgo;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(241, 89, 89);
+    grid-area: footer;
+}
+
+html {
+    --s: 120px;
+    /* control the size*/
+
+    --_g: radial-gradient(#0000 70%, #1a2030 71%);
+    background:
+        var(--_g), var(--_g) calc(var(--s)/2) calc(var(--s)/2),
+        conic-gradient(#0f9177 25%, #fdebad 0 50%, #d34434 0 75%, #b5d999 0);
+    background-size: var(--s) var(--s);
+}
+
+@media (max-width: 1200px) {
+    html {
+        --s: 55px;
+        /* control the size */
+        --b: 15px;
+        /* control the thickness of the curved lines */
+
+        --_r: calc(1.28*var(--s) + var(--b)/2) at top 50%;
+        --_f: calc(99.5% - var(--b)), #F9F2E7 calc(101% - var(--b)) 99.5%, #0000 101%;
+        --_g0: calc(-.8*var(--s)), #88A65E var(--_f);
+        --_g1: calc(-.8*var(--s)), #BFB35A var(--_f);
+        --_s: calc(1.8*var(--s) + var(--b));
+        background:
+            radial-gradient(var(--_r) right var(--_g0)) calc(-1*var(--_s)) var(--s),
+            radial-gradient(var(--_r) left var(--_g1)) var(--_s) calc(-1*var(--s)),
+            radial-gradient(var(--_r) right var(--_g1)) calc(var(--_s)/-2) calc(-1*var(--s)),
+            radial-gradient(var(--_r) left var(--_g0)) calc(var(--_s)/ 2) var(--s),
+            linear-gradient(90deg, #88A65E 50%, #BFB35A 0);
+        background-size: var(--_s) calc(4*var(--s));
+    }
+
+}
+
+@media (max-width: 992px) {
+    html {
+        --s: 100px;
+        /* control the size */
+        --c1: #F8B195;
+        --c2: #355C7D;
+
+        --_g:
+            var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%, var(--c1) 36% 44%,
+            var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%, var(--c1) 76% 84%, var(--c2) 86% 94%;
+        background:
+            radial-gradient(100% 100% at 100% 0, var(--c1) 4%, var(--_g), #0008 96%, #0000),
+            radial-gradient(100% 100% at 0 100%, #0000, #0008 4%, var(--_g), var(--c1) 96%) var(--c1);
+        background-size: var(--s) var(--s);
+    }
+}
+
+@media (max-width: 730px) {
+
+    html {
+        --s: 80px;
+        /* control the size */
+        --c: #542437;
+
+        --_g:
+            #0000 calc(-650%/13) calc(50%/13), var(--c) 0 calc(100%/13),
+            #0000 0 calc(150%/13), var(--c) 0 calc(200%/13),
+            #0000 0 calc(250%/13), var(--c) 0 calc(300%/13);
+        --_g0: repeating-linear-gradient(45deg, var(--_g));
+        --_g1: repeating-linear-gradient(-45deg, var(--_g));
+        background:
+            var(--_g0), var(--_g0) var(--s) var(--s),
+            var(--_g1), var(--_g1) var(--s) var(--s) #C02942;
+        background-size: calc(2*var(--s)) calc(2*var(--s));
+    }
+
+    .header,
+    .carrusel,
+    .aside {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+        ;
+    }
+
+    .titulo {
+        grid-area: uno;
+    }
+
+    .buscar {
+        grid-area: dos;
+    }
+
+    .menu {
+        grid-area: tres;
+    }
+
+    .perfil {
+        grid-area: cuatro;
+    }
+
+    .carrusel {
+        grid-template-areas:
+            "filauno"
+            "filados"
+            "filatres"
+            "filacuatro"
+            "filacinco"
+        ;
+    }
+
+    .fotos_carrusel {
+        grid-area: filauno;
+    }
+
+    .vendidos {
+        height: 90px;
+        grid-area: filados;
+    }
+
+    .producto1 {
+        grid-area: filatres;
+    }
+
+    .producto2 {
+        grid-area: filacuatro;
+    }
+
+    .producto3 {
+        grid-area: filacinco;
+    }
+
+    .aside {
+        grid-template-areas:
+            "filauno_aside"
+            "filados_aside"
+            "filatres_aside"
+        ;
+    }
+
+    .gana {
+        grid-area: filauno_aside;
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: filados_aside;
+    }
+
+    .asidealgo {
+        margin: 20px;
+        grid-area: filatres_aside;
+    }
+}
+
+.centrado {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centrado div label a {
+    position: relative;
+    display: inline-block;
+    background: #424242;
+    padding: 15px 30px;
+    color: #555;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.centrado div:hover label a {
+    background: #e91e63;
+    color: white;
+    box-shadow: 0 2px 20px #e91e63;
+}
+
+.centrado button{
+    background-color: blueviolet;
+    padding: 10px;
+    color: white;
+    outline: none;
+    width: 80px;
+    border-radius: 20px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

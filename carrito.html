@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_carrito.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="heading">
+            <span>e</span>
+            <span>x</span>
+            <span>p</span>
+            <span>e</span>
+            <span>r</span>
+            <span>i</span>
+            <span>e</span>
+            <span>n</span>
+            <span>c</span>
+            <span>i</span>
+            <span>a</span>
+            <span>s</span>
+        </h1>
+    </header>
+    <section class="contenedor">
+
+        <!-- TARJETAS -->
+        <div class="contenedor-items" id="contenedor-items">
+        </div>
+        <!-- ------------- -->
+
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <!-- CARGA DE CARRITO -->
+            <div class="carrito-items">
+            </div>
+            <!-- -------- -->
+
+            <!-- TOTAL A PAGAR -->
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total" id="carrito-precio-total">
+                        $0,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+            <!-- --------------------------- -->
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="listar_Api.js" async></script>
+    <script src="script_carrito.js" async></script>
+</body>
+
+</html>
